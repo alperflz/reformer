@@ -1,0 +1,96 @@
+/* ----------- Admin Global ----------- */
+.admin-container {
+    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ----------- Table Styles ----------- */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th {
+    background: #f5f5f5;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.admin-table tr:hover {
+    background-color: #fafafa;
+}
+
+
+/* ----------- Form Styles ----------- */
+.admin-form {
+    max-width: 600px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.admin-form label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.admin-form textarea {
+    min-height: 120px;
+}
+
+.admin-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ----------- Actions Column ----------- */
+.admin-action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-action-button {
+    height: 40px;
+    width: 60px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+}

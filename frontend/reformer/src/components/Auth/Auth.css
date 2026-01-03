@@ -1,0 +1,213 @@
+/* ============================
+   SAYFA ARKAPLANI
+============================ */
+.auth-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
+}
+
+/* ============================
+   ORTA KART (SOL + SAĞ)
+============================ */
+.auth-card {
+    display: flex;
+    width: 100%;
+    max-width: 1120px;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+}
+
+/* ============================
+   SOL TARAF – BİLGİ PANELİ
+============================ */
+.auth-info {
+    flex: 1;
+    background: radial-gradient(circle at top left, #16a34a, #0f172a);
+    color: #fff;
+    padding: 2.4rem 2.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.auth-info-inner {
+    width: 100%;
+}
+
+.auth-info h3 {
+    font-size: 24px;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.auth-info-sub {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+/* FAYDALAR LİSTESİ */
+.auth-benefits {
+    list-style: none;
+    margin: 0 0 1.8rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.auth-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.auth-benefits i {
+    font-size: 20px;
+    margin-top: 2px;
+    color: #bbf7d0;
+}
+
+.auth-benefits h4 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.auth-benefits p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* SOL İLLÜSTRASYON */
+.auth-illustration {
+    width: 100%;
+    max-width: 260px;
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+}
+
+/* ============================
+   SAĞ TARAF – FORM PANELİ
+============================ */
+.auth-panel {
+    flex: 1;
+    padding: 2.6rem 2.6rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--surface-color, #ffffff);
+}
+
+/* BAŞLIK */
+.auth-panel-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.auth-panel-header p {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+/* FORM ALANI */
+.auth-panel-body form {
+    width: 100%;
+}
+
+.auth-panel-body label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.auth-panel-body input {
+    width: 100%;
+    padding: 12px 11px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg, #f9fafb);
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    transition: 0.2s;
+}
+
+.auth-panel-body input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.25);
+}
+
+/* BUTON */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.25s;
+    margin-top: 4px;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(22, 163, 74, 0.35);
+}
+
+/* LOGIN ↔ REGISTER SWITCH */
+.auth-switch {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 0.8rem;
+}
+
+.auth-switch span {
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 960px) {
+    .auth-card {
+        flex-direction: column;
+        max-width: 520px;
+        height: unset;
+    }
+
+    .auth-info {
+        padding: 1.9rem 1.6rem;
+    }
+
+    .auth-panel {
+        padding: 2rem 1.7rem 1.8rem;
+    }
+
+    .auth-illustration {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-page {
+        padding: 1.5rem 0.8rem;
+    }
+}

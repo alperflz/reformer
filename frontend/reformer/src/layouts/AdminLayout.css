@@ -1,0 +1,99 @@
+/* ----- WRAPPER ----- */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f6fa;
+}
+
+/* ----- SIDEBAR ----- */
+.admin-sidebar {
+    width: 240px;
+    background: #1e1e2d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+}
+
+.admin-logo {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-logo img {
+    width: 150px;
+}
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .75rem 1rem;
+    color: #cfd0e0;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: .4rem;
+    font-size: .95rem;
+    transition: .2s;
+}
+
+.admin-nav a:hover {
+    background: #2a2a3d;
+    color: #fff;
+}
+
+.admin-nav a.active {
+    background: #4b4df7;
+    color: #fff;
+}
+
+/* ----- MAIN AREA ----- */
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- TOPBAR ----- */
+.admin-topbar {
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.admin-topbar-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.admin-topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-topbar-user button {
+    background: #ff0033;
+    color: #fff;
+    border: none;
+    padding: .45rem .7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.admin-topbar-user button:hover {
+    background: #d1002c;
+}
+
+/* ----- PAGE CONTENT ----- */
+.admin-content {
+    padding: 1.7rem;
+}

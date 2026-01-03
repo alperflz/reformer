@@ -1,0 +1,119 @@
+.programs-section {
+  padding: 100px 0;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.programs-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.programs-header h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.programs-header p {
+  font-size: 1.1rem;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+/* === GRID === */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.program-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, var(--primary-dark), var(--card-bg));
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* === ICON === */
+.program-icon {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.program-card:hover .program-icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+/* === TEXT === */
+.program-card h3 {
+    font-family: "Montserrat", sans-serif;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.program-card p {
+  color: var(--muted-text);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === LINK === */
+.program-link {
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.program-link i {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.program-link:hover {
+  color: var(--highlight-dark);
+}
+
+.program-link:hover i {
+  transform: translateX(4px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .programs-header h2 {
+    font-size: 2rem;
+  }
+}

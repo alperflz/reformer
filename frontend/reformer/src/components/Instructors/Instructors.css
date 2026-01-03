@@ -1,0 +1,63 @@
+.instructors-section {
+  padding: 100px 0;
+}
+
+.instructors-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.instructors-header h2 {
+    font-family: "Montserrat", sans-serif;
+  color: var(--secondary-color);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.instructors-header p {
+  color: var(--muted-text);
+  font-size: 1.1rem;
+}
+
+.instructors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.instructor-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.instructor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.instructor-info {
+  padding: 1.5rem;
+}
+
+.instructor-info h4 {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.instructor-info p {
+  color: var(--muted-text);
+  font-size: 1rem;
+}

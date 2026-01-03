@@ -1,0 +1,22 @@
+.educations {
+    margin: 40px 0 ;
+}
+
+.educations-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.educations-header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.educations-header p {
+    font-size: 1.1rem;
+    color: var(--muted-text);
+    line-height: 1.7;
+}

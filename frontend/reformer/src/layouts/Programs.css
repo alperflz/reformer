@@ -1,0 +1,300 @@
+/* =========================================================
+   RE:FORM ACADEMY — PREMIUM ADMIN PANEL v2
+   Stripe + Linear + Vercel UI blend
+========================================================= */
+
+/* -------------------------------
+   GLOBAL VARIABLES
+--------------------------------*/
+:root {
+  --bg: #f3f4f6;
+  --bg-soft: #eef0f4;
+
+  --card: #ffffff;
+  --card-hover: #fafafa;
+
+  --border: #dfe3eb;
+  --border-dark: #c7ccd6;
+
+  --text: #1a1a1a;
+  --text-soft: #6b7280;
+  --text-light: #9ca3af;
+
+  --primary: #2563eb;
+  --primary-hover: #1e4ed8;
+
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+
+  --radius: 12px;
+  --radius-sm: 7px;
+
+  --shadow: 0 4px 14px rgba(0,0,0,0.06);
+  --shadow-soft: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-hover: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+
+/* =========================================================
+   PAGE WRAPPERS
+========================================================= */
+
+.admin-programs-page,
+.admin-programs-form,
+.admin-courses-page,
+.admin-courses-form,
+.admin-enrollments-page {
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+/* =========================================================
+   HEADERS
+========================================================= */
+
+.admin-header,
+.admin-programs-header,
+.admin-courses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.admin-header h1,
+.admin-programs-header h1,
+.admin-courses-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+/* =========================================================
+   INPUT SYSTEM
+========================================================= */
+
+.admin-input,
+.admin-programs-input,
+.admin-courses-input,
+.admin-enrollments-input,
+.admin-programs-form input,
+.admin-programs-form textarea,
+.admin-programs-form select,
+.admin-courses-form input,
+.admin-courses-form textarea,
+.admin-courses-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  font-size: 15px;
+  transition: 0.25s ease;
+  margin-bottom: 18px;
+  margin-top: 6px;
+}
+
+.admin-input:focus,
+.admin-programs-input:focus,
+.admin-courses-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  outline: none;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.admin-programs-form label,
+.admin-courses-form label {
+  font-weight: 600;
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* =========================================================
+   BUTTON SYSTEM
+========================================================= */
+
+.admin-btn-primary,
+.admin-programs-btn-primary,
+.admin-courses-btn-primary {
+  background: var(--primary);
+  padding: 12px 24px;
+  color: white;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: 0.25s;
+}
+
+.admin-btn-primary:hover,
+.admin-programs-btn-primary:hover,
+.admin-courses-btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.admin-btn-secondary,
+.admin-programs-btn-secondary,
+.admin-courses-btn-secondary {
+  background: #f8f9fb;
+  padding: 11px 20px;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  color: var(--text);
+}
+
+.admin-btn-secondary:hover {
+  background: #eceff3;
+}
+
+.admin-btn-small,
+.admin-programs-btn-small,
+.admin-courses-btn-small,
+.admin-enrollments-btn-small {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  background: #f1f1f1;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.admin-btn-small:hover {
+  background: #e4e4e4;
+}
+
+.admin-btn-small-danger,
+.admin-programs-btn-danger,
+.admin-courses-btn-danger,
+.admin-enrollments-btn-danger {
+  background: var(--danger);
+  border: none;
+  color: white !important;
+}
+
+.admin-btn-small-danger:hover {
+  background: var(--danger-hover);
+}
+
+/* =========================================================
+   TABLE REWORK — REAL DASHBOARD TABLE
+========================================================= */
+
+.admin-table,
+.admin-programs-table,
+.admin-courses-table,
+.admin-enrollments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+}
+
+.admin-table th,
+.admin-programs-table th,
+.admin-courses-table th,
+.admin-enrollments-table th {
+  padding: 16px 18px;
+  background: var(--bg-soft);
+  color: var(--text-soft);
+  font-weight: 700;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table td,
+.admin-programs-table td,
+.admin-courses-table td,
+.admin-enrollments-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+
+.admin-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   EDITOR BOXES — ARRAY / FAQ / CURRICULUM
+========================================================= */
+
+.admin-programs-array-editor,
+.admin-programs-curriculum-editor,
+.admin-programs-faq-editor {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 22px;
+  margin-top: 24px;
+  box-shadow: var(--shadow);
+}
+
+.admin-programs-array-editor li,
+.admin-programs-curriculum-editor li,
+.admin-programs-faq-editor li {
+  padding: 14px 16px;
+  background: #f7f7f8;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e4e8;
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   COVER & GALLERY
+========================================================= */
+
+.admin-programs-cover-preview {
+  width: 280px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border-dark);
+  margin-bottom: 16px;
+}
+
+.admin-programs-gallery-list li {
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+/* =========================================================
+   BUTTON GROUPS
+========================================================= */
+
+.admin-courses-actions,
+.admin-enrollments-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.admin-programs-loading,
+.admin-courses-loading,
+.admin-enrollments-loading {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 17px;
+  color: var(--text-soft);
+}

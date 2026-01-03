@@ -1,0 +1,226 @@
+.policy-page {
+    width: 100%;
+    padding-bottom: 4rem;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* HERO */
+.policy-hero {
+    margin-bottom: 2.5rem;
+}
+
+.policy-hero-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.premium-hero {
+    padding: 4.5rem 0 3.5rem;
+    background:
+        radial-gradient(900px 450px at 20% -10%,
+            rgba(58, 184, 155, 0.20),
+            transparent),
+        radial-gradient(850px 450px at 80% -10%,
+            rgba(30, 139, 113, 0.12),
+            transparent),
+        linear-gradient(180deg,
+            #e7eceb 0%,
+            #dde5e3 100%);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+body.dark .premium-hero {
+    background:
+        radial-gradient(1000px 550px at 10% -10%, rgba(58, 184, 155, 0.22), transparent),
+        radial-gradient(950px 550px at 100% 0%, rgba(30, 139, 113, 0.18), transparent),
+        linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-hero .hero-text {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* BADGE */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--card-bg);
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.policy-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
+    .policy-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-sidebar {
+        position: relative;
+        padding-bottom: 1rem;
+    }
+}
+
+.policy-sidebar {
+    position: sticky;
+    top: 160px;
+    align-self: start;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .7rem 1rem;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .25s ease;
+    color: var(--text-color);
+}
+
+.sidebar-link i {
+    font-size: 14px;
+    opacity: .7;
+}
+
+.sidebar-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-link.active {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+}
+
+body.dark .sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .sidebar-link.active {
+    background: rgba(255, 255, 255, 0.06);
+    border-left-color: var(--primary-color);
+}
+
+.policy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-banner {
+    background: linear-gradient(145deg, #fefeff, #f3f5ff);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark .section-banner {
+    background: linear-gradient(145deg, #181818, #111);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.policy-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.policy-card h2 {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.policy-card p {
+    line-height: 1.6;
+    opacity: .9;
+    margin-bottom: 1rem;
+}
+
+.policy-card ul {
+    margin-left: 1.2rem;
+    line-height: 1.7;
+}
+
+.policy-card ul li {
+    margin-bottom: .4rem;
+}
+
+.policy-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.1rem;
+}
+
+.info-box {
+    background: var(--card-hover-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.info-box h4 {
+    margin-bottom: .4rem;
+    font-size: 1rem;
+}
+
+.policy-list-box {
+    padding: 1rem 1.2rem;
+    background: var(--card-hover-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: .8rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.contact-list i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 990px) {
+    .policy-sidebar {
+        position: static;
+    }
+}

@@ -1,0 +1,141 @@
+/* === FOOTER === */
+.site-footer {
+  background: var(--header-bg);
+  color: var(--text-color);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* === GRID === */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--primary-color);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-col ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* === LOGO + ABOUT === */
+.footer-logo {
+  height: 55px;
+  margin-bottom: 1rem;
+}
+
+.footer-col.about p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+  max-width: 320px;
+}
+
+/* === SOCIAL === */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.footer-social a {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-2px) scale(1.1);
+  color: var(--accent-color);
+}
+
+/* === BOTTOM === */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.2rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--muted-text);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+/* === DARK MODE === */
+body.dark .site-footer {
+  background: #101010;
+  color: #eee;
+  border-color: #222;
+}
+
+body.dark .footer-col h4 {
+  color: var(--highlight-light);
+}
+
+body.dark .footer-social a:hover {
+  color: var(--highlight-light);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .footer-col.about p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
